@@ -6,13 +6,13 @@ def first_function():
     
 first_function()
 
-# Input, no return
+# 2. Input, no return
 def addition(a, b): #arguments
     print(a+b)
     
 addition(10,15) #parameters
 
-# Input and return
+# 3. Input and return
 
 def multiplication(a, b):
     return a*b
@@ -20,3 +20,8 @@ def multiplication(a, b):
 result = multiplication(10, 20)
 print(result)
 
+# 4. No input, return
+
+def greetings():
+    return "Hello"
+print(greetings())
