@@ -33,3 +33,6 @@ for line in lines:
 #Real strategy
 with open("Module 2/name.txt", 'a') as file:
     content = file.writelines(lines)
+
+
+# File ekbar read hoye gele cursor sobar seshe chole ashe tai 2nd time ar pora jay na ejonno seek() method diye cursor e position fix kora jay
