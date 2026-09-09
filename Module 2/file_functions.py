@@ -2,7 +2,11 @@
 import pathlib #File path checking kore
 import os #Os e check kore
 
+#absolute path -> prithibir asia mohadesher bangladesher khulna jhelar jessore e amar barir pashe
+# relative path -> amar barir pashe
 
+# Location e samne jete /
+# pichone jete ..
 """
 if os.path.exists('name.txt'):
     print("File Exists")

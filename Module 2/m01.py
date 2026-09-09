@@ -5,12 +5,12 @@
 # Set
 
 # Dictionary
-st = {
-    "name":"Kashem",
-    "batch" : 3
-    }
+# st = {
+#     "name":"Kashem",
+#     "batch" : 3
+#     }
 
-print(st.items())
+# print(st.items())
 
 
 # for loop
@@ -22,3 +22,10 @@ print(st.items())
 
 # for i in range(3): # 0 theke 2 mane (3 er ag porjonto)
 #     print(i)
+
+print("hello")
+
+with open("../txt-files/me.txt", 'r') as f:
+    content = f.read()
+    print(content)
+    
