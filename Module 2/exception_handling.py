@@ -11,12 +11,3 @@ finally : # always eta run hobeiiiii
     print("Done")
     """
     
-# Manually Error toiri ba raise kora
-def check_file(filename):
-    if not filename.endswith('.txt'):
-        raise ValueError("Only .txt files are accepted!") #Ekhane manuall vabe ekta error/exception raise kora holo. Ekhane jekono error deya jay chaile
-    else:
-        print("File uploaded successfully!")
-        
-check_file("name.txt")      
-check_file("name.png")
