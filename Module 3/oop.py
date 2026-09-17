@@ -1,7 +1,7 @@
 class Phone:
-    def __init__(self, brand, model) : #Parameterized Constructor
-        self.brand = brand
-        self.model = model
+    # def __init__(self, brand, model) : #Parameterized Constructor
+    #     self.brand = brand
+    #     self.model = model
         
     def __init__(self, brand="Apple" , model ="18"):#Default Parameter
         self.brand = brand
