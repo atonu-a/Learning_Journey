@@ -1,4 +1,4 @@
-class Bank:
+"""class Bank:
     def __init__(self, name):
         self.name = name
         self._balance = 0
@@ -14,4 +14,4 @@ class Bank:
 ba1 = Bank("Atonu")
 print(ba1.balance)
 ba1.balance = 10
-print(ba1.balance)
+print(ba1.balance)"""
