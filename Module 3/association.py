@@ -1,5 +1,5 @@
 #Association
-#Association means one clss can access another class's instances. An object can use another object as it's paremeter. 
+#Association means one clss can access another class's instances. An object can use another object as it's paremeter. It's an strong relationship
 class Mobile:
     def __init__(self, brand, model) :
         self.brand = brand
