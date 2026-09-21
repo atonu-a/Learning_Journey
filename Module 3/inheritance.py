@@ -43,3 +43,9 @@ car = Car("Corolla","Toyota",  4)
 
 car.show_info()
 car.show_car_info()"""
+
+# Single inheritance
+#Multiple inheritance -> one child will access multiple class
+# Multilevel -> 3rd one access 2nd, 2nd one access 1st one
+# Hirerchical -> multiple classes will access single class
+# Hybrid -> all inheritance combined
