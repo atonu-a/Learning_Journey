@@ -10,6 +10,7 @@ class Father(GrandFather):
         super().__init__(name, title)
         self.hobby = hobby
 
+
     
 grand_f = GrandFather("Sunil", "Roy Chowdhury")   
 father = Father("Fishing", "Sumon", grand_f.title )
@@ -20,7 +21,7 @@ print(grand_f.name)
 print(grand_f.title)"""
 
 
-class Vehicle:
+"""class Vehicle:
     def __init__(self, model, brand):
         self.model = model
         self.brand = brand
@@ -38,7 +39,7 @@ class Car(Vehicle):
 
 
 
-car = Car("Toyota", "Corola", 4)
+car = Car("Corolla","Toyota",  4)
 
 car.show_info()
-car.show_car_info()
+car.show_car_info()"""
