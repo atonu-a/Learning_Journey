@@ -6,12 +6,12 @@ class Engine:
         self.power = power
         
 class Car:
-    def __init__(self, name) -> None:
+    def __init__(self, name, power) -> None:
         self.name = name
-        self.engine = Engine("800HP")
+        self.engine = Engine(power)
     def show_info(self):
         print(f"Car name : {self.name}\nPower : {self.engine.power}")
         
         
-car1 = Car("Audi")
+car1 = Car("Audi", "800HP")
 car1.show_info()
