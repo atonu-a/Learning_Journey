@@ -2,6 +2,6 @@ class BankAccount:
     def withdraw(self):
         print("Money withdrawn from normal account!")
 class SavingsAccount(BankAccount):
-    def withdraw(self): #
+    def withdraw(self): #same method but different work
         print("Money withdrawn from normal account!")
         

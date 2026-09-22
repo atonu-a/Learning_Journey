@@ -7,4 +7,4 @@ class Example:
 a = Example()
 print(a.public_var)
 print(a._protected_var)
-print(a.__private_var) #Cant access
+print(a._Example__private_var) #Cant access
