@@ -9,3 +9,8 @@ def mul(a, b):
 
 def div(a,b ):
     return a/b
+
+print(__name__)
+
+if __name__ == 'main':
+    print("It will print when the calculator.py file directly executed!")
