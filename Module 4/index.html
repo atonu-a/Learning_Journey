@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<!-- Source page: `node build.js` fills the build markers below and writes _site/index.html -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Free fake and reliable API for testing and prototyping. Six resources, all HTTP methods, no signup." />
+    <link rel="stylesheet" href="/style.css" />
+    <title>JSONPlaceholder - Free Fake REST API</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-E3C3GCQVBN"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+
+      gtag('config', 'G-E3C3GCQVBN')
+    </script>
+    <script
+      async
+      src="https://media.ethicalads.io/media/client/ethicalads.min.js"
+    ></script>
+  </head>
+
+  <body class="antialiased">
+    <header class="page rule flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 border-b py-6">
+      <a href="/" class="plain font-sans text-lg font-medium">JSONPlaceholder</a>
+      <nav class="muted flex flex-wrap gap-x-5 text-sm" aria-label="Primary">
+        <a href="#guide" class="plain hover:text-clay">Guide</a>
+        <a href="#sponsors" class="plain hover:text-clay">Sponsors</a>
+        <a href="https://blog.typicode.com" class="plain hover:text-clay">Blog</a>
+        <a href="https://github.com/typicode/jsonplaceholder" class="plain hover:text-clay">GitHub</a>
+        <a href="https://my-json-server.typicode.com" class="plain hover:text-clay">My JSON Server</a>
+      </nav>
+    </header>
+
+    <main class="page">
+      <!-- Intro -->
+      <section class="pt-16 pb-20">
+        <p class="eyebrow">The free fake REST API, since 2013</p>
+        <h1 class="mt-3 text-4xl sm:text-5xl">Fake data you can rely on.</h1>
+        <p class="mt-6 text-lg leading-relaxed">
+          JSONPlaceholder is a free online REST API that you can use whenever you
+          need some fake data: in documentation and tutorials, in code examples, in
+          a quick prototype, or simply to test things locally.
+        </p>
+        <dl class="mt-10 grid gap-8 border-t border-rule pt-8 sm:grid-cols-2 dark:border-night-rule">
+          <div>
+            <dt class="font-sans text-4xl">120 billion <span class="muted text-xl">requests / month</span></dt>
+            <dd class="muted mt-1 text-sm">Free for everyone, and it stays that way. <strong class="font-semibold text-ink dark:text-night-ink">No signup, no API key.</strong></dd>
+          </div>
+          <div>
+            <dt class="font-sans text-4xl">Since 2013</dt>
+            <dd class="muted mt-1 text-sm">Same routes, same responses. <strong class="font-semibold text-ink dark:text-night-ink">Code written against it a decade ago still works.</strong></dd>
+          </div>
+        </dl>
+        <p class="mt-8">
+          <button type="button" data-copy class="inline-flex items-center gap-3 rounded-md border border-rule bg-paper-deep px-3 py-2 font-mono text-sm transition hover:border-clay dark:border-night-rule dark:bg-night-deep" title="Copy to clipboard">
+            <span>https://jsonplaceholder.typicode.com</span>
+            <span class="muted"><span class="grid size-4 place-items-center" aria-hidden="true">
+  <svg data-icon="copy" class="size-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5.5" y="5.5" width="8" height="8" rx="1.5"/><path d="M10.5 5.5V3.5a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2"/></svg>
+  <svg data-icon="check" class="size-4 text-sage" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" hidden><path d="M3 8.5l3 3 7-7"/></svg>
+</span></span>
+          </button>
+        </p>
+        <p class="muted mt-4 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm">
+          <span>Powered by</span>
+          <a href="https://github.com/typicode/json-server" class="plain inline-flex items-center gap-1.5 rounded-md border border-rule bg-paper-deep px-2.5 py-1 font-medium text-ink transition hover:border-clay dark:border-night-rule dark:bg-night-deep dark:text-night-ink" data-repo="typicode/json-server">
+      <span>json-server</span>
+      <span class="muted font-normal">★ <span class="stars">75717</span></span>
+    </a>
+<a href="https://github.com/typicode/lowdb" class="plain inline-flex items-center gap-1.5 rounded-md border border-rule bg-paper-deep px-2.5 py-1 font-medium text-ink transition hover:border-clay dark:border-night-rule dark:bg-night-deep dark:text-night-ink" data-repo="typicode/lowdb">
+      <span>lowdb</span>
+      <span class="muted font-normal">★ <span class="stars">22584</span></span>
+    </a>
+        </p>
+      </section>
+
+      <!-- Sponsors -->
+      <section id="sponsors" class="pb-16">
+        <h2 class="text-2xl">Sponsors</h2>
+        <p class="muted mt-2 text-sm">
+          JSONPlaceholder is supported by the following companies and
+          <a href="https://github.com/sponsors/typicode">sponsors</a> on GitHub.
+        </p>
+        <div class="sponsor-row mt-6 flex flex-wrap items-center gap-x-10 gap-y-5">
+          <a href="https://mockend.com" target="_blank" rel="noreferrer" class="plain"><img src="/mockend.svg" alt="Mockend" /></a>
+<a href="https://zuplo.link/json-server-web" target="_blank" rel="noreferrer" class="plain"><img src="https://github.com/user-attachments/assets/adfee31f-a8b6-4684-9a9b-af4f03ac5b75" alt="Zuplo" /></a>
+<a href="https://serpapi.com/?utm_source=typicode" target="_blank" rel="noreferrer" class="plain"><img src="https://github.com/user-attachments/assets/52b3039d-1e4c-4c68-951c-93f0f1e73611" alt="SerpApi" /></a>
+          <a href="https://github.com/sponsors/typicode" class="muted text-sm">Your company logo here</a>
+        </div>
+      </section>
+
+      <!-- Guide -->
+      <section id="guide" class="pb-16">
+        <h2 class="text-2xl">Guide</h2>
+        <p class="muted mt-2 text-sm">
+          Examples use the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</a>,
+          but any HTTP client works.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-x-5 gap-y-1 border-b border-rule text-sm dark:border-night-rule" role="tablist" aria-label="Examples">
+          <button role="tab" id="tab-get" aria-controls="panel-get" aria-selected="true"
+      class="-mb-px border-b-2 border-transparent py-2 font-medium text-ink-soft aria-selected:border-clay aria-selected:text-ink hover:text-ink dark:text-night-soft dark:aria-selected:text-night-ink dark:hover:text-night-ink">Get</button>
+<button role="tab" id="tab-list" aria-controls="panel-list" aria-selected="false"
+      class="-mb-px border-b-2 border-transparent py-2 font-medium text-ink-soft aria-selected:border-clay aria-selected:text-ink hover:text-ink dark:text-night-soft dark:aria-selected:text-night-ink dark:hover:text-night-ink">List</button>
+<button role="tab" id="tab-create" aria-controls="panel-create" aria-selected="false"
+      class="-mb-px border-b-2 border-transparent py-2 font-medium text-ink-soft aria-selected:border-clay aria-selected:text-ink hover:text-ink dark:text-night-soft dark:aria-selected:text-night-ink dark:hover:text-night-ink">Create</button>
+<button role="tab" id="tab-update" aria-controls="panel-update" aria-selected="false"
+      class="-mb-px border-b-2 border-transparent py-2 font-medium text-ink-soft aria-selected:border-clay aria-selected:text-ink hover:text-ink dark:text-night-soft dark:aria-selected:text-night-ink dark:hover:text-night-ink">Update</button>
+<button role="tab" id="tab-patch" aria-controls="panel-patch" aria-selected="false"
+      class="-mb-px border-b-2 border-transparent py-2 font-medium text-ink-soft aria-selected:border-clay aria-selected:text-ink hover:text-ink dark:text-night-soft dark:aria-selected:text-night-ink dark:hover:text-night-ink">Patch</button>
+<button role="tab" id="tab-delete" aria-controls="panel-delete" aria-selected="false"
+      class="-mb-px border-b-2 border-transparent py-2 font-medium text-ink-soft aria-selected:border-clay aria-selected:text-ink hover:text-ink dark:text-night-soft dark:aria-selected:text-night-ink dark:hover:text-night-ink">Delete</button>
+<button role="tab" id="tab-filter" aria-controls="panel-filter" aria-selected="false"
+      class="-mb-px border-b-2 border-transparent py-2 font-medium text-ink-soft aria-selected:border-clay aria-selected:text-ink hover:text-ink dark:text-night-soft dark:aria-selected:text-night-ink dark:hover:text-night-ink">Filter</button>
+<button role="tab" id="tab-nested" aria-controls="panel-nested" aria-selected="false"
+      class="-mb-px border-b-2 border-transparent py-2 font-medium text-ink-soft aria-selected:border-clay aria-selected:text-ink hover:text-ink dark:text-night-soft dark:aria-selected:text-night-ink dark:hover:text-night-ink">Nested</button>
+        </div>
+        <div role="tabpanel" id="panel-get" aria-labelledby="tab-get" class="mt-4">
+    <div class="relative">
+      <pre class="shiki shiki-themes vitesse-light vitesse-dark" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212" tabindex="0"><code><span class="line"><span style="--shiki-light:#59873A;--shiki-dark:#80A665">fetch</span><span style="--shiki-light:#999999;--shiki-dark:#666666">(</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">'</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">https://jsonplaceholder.typicode.com/posts/1</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">'</span><span style="--shiki-light:#999999;--shiki-dark:#666666">)</span></span>
+<span class="line"><span style="--shiki-light:#999999;--shiki-dark:#666666">  .</span><span style="--shiki-light:#59873A;--shiki-dark:#80A665">then</span><span style="--shiki-light:#999999;--shiki-dark:#666666">(</span><span style="--shiki-light:#B07D48;--shiki-dark:#BD976A">response</span><span style="--shiki-light:#999999;--shiki-dark:#666666"> =></span><span style="--shiki-light:#B07D48;--shiki-dark:#BD976A"> response</span><span style="--shiki-light:#999999;--shiki-dark:#666666">.</span><span style="--shiki-light:#59873A;--shiki-dark:#80A665">json</span><span style="--shiki-light:#999999;--shiki-dark:#666666">())</span></span>
+<span class="line"><span style="--shiki-light:#999999;--shiki-dark:#666666">  .</span><span style="--shiki-light:#59873A;--shiki-dark:#80A665">then</span><span style="--shiki-light:#999999;--shiki-dark:#666666">(</span><span style="--shiki-light:#B07D48;--shiki-dark:#BD976A">json</span><span style="--shiki-light:#999999;--shiki-dark:#666666"> =></span><span style="--shiki-light:#B07D48;--shiki-dark:#BD976A"> console</span><span style="--shiki-light:#999999;--shiki-dark:#666666">.</span><span style="--shiki-light:#59873A;--shiki-dark:#80A665">log</span><span style="--shiki-light:#999999;--shiki-dark:#666666">(</span><span style="--shiki-light:#B07D48;--shiki-dark:#BD976A">json</span><span style="--shiki-light:#999999;--shiki-dark:#666666">))</span></span></code></pre>
+      <button type="button" data-copy class="muted absolute top-2 right-2 rounded-md p-1.5 transition hover:text-clay" title="Copy to clipboard"><span class="grid size-4 place-items-center" aria-hidden="true">
+  <svg data-icon="copy" class="size-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5.5" y="5.5" width="8" height="8" rx="1.5"/><path d="M10.5 5.5V3.5a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2"/></svg>
+  <svg data-icon="check" class="size-4 text-sage" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" hidden><path d="M3 8.5l3 3 7-7"/></svg>
+</span></button>
+    </div>
+    <p class="muted mt-4 mb-2 text-xs tracking-wide uppercase">Response</p>
+    <pre class="shiki shiki-themes vitesse-light vitesse-dark" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212" tabindex="0"><code><span class="line"><span style="--shiki-light:#999999;--shiki-dark:#666666">{</span></span>
+<span class="line"><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">  "</span><span style="--shiki-light:#998418;--shiki-dark:#B8A965">userId</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#2F798A;--shiki-dark:#4C9A91"> 1</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">  "</span><span style="--shiki-light:#998418;--shiki-dark:#B8A965">id</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#2F798A;--shiki-dark:#4C9A91"> 1</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">  "</span><span style="--shiki-light:#998418;--shiki-dark:#B8A965">title</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">sunt aut facere repellat provident occaecati excepturi optio reprehenderit</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">  "</span><span style="--shiki-light:#998418;--shiki-dark:#B8A965">body</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">quia et suscipit</span><span style="--shiki-light:#A65E2B;--shiki-dark:#C99076">\n</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">suscipit recusandae consequuntur expedita et cum</span><span style="--shiki-light:#A65E2B;--shiki-dark:#C99076">\n</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">reprehenderit molestiae ut ut quas totam</span><span style="--shiki-light:#A65E2B;--shiki-dark:#C99076">\n</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">nostrum rerum est autem sunt rem eveniet architecto</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">"</span></span>
+<span class="line"><span style="--shiki-light:#999999;--shiki-dark:#666666">}</span></span></code></pre>
+    
+  </div>
+<div role="tabpanel" id="panel-list" aria-labelledby="tab-list" class="mt-4" hidden>
+    <div class="relative">
+      <pre class="shiki shiki-themes vitesse-light vitesse-dark" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212" tabindex="0"><code><span class="line"><span style="--shiki-light:#59873A;--shiki-dark:#80A665">fetch</span><span style="--shiki-light:#999999;--shiki-dark:#666666">(</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">'</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">https://jsonplaceholder.typicode.com/posts</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">'</span><span style="--shiki-light:#999999;--shiki-dark:#666666">)</span></span>
+<span class="line"><span style="--shiki-light:#999999;--shiki-dark:#666666">  .</span><span style="--shiki-light:#59873A;--shiki-dark:#80A665">then</span><span style="--shiki-light:#999999;--shiki-dark:#666666">(</span><span style="--shiki-light:#B07D48;--shiki-dark:#BD976A">response</span><span style="--shiki-light:#999999;--shiki-dark:#666666"> =></span><span style="--shiki-light:#B07D48;--shiki-dark:#BD976A"> response</span><span style="--shiki-light:#999999;--shiki-dark:#666666">.</span><span style="--shiki-light:#59873A;--shiki-dark:#80A665">json</span><span style="--shiki-light:#999999;--shiki-dark:#666666">())</span></span>
+<span class="line"><span style="--shiki-light:#999999;--shiki-dark:#666666">  .</span><span style="--shiki-light:#59873A;--shiki-dark:#80A665">then</span><span style="--shiki-light:#999999;--shiki-dark:#666666">(</span><span style="--shiki-light:#B07D48;--shiki-dark:#BD976A">json</span><span style="--shiki-light:#999999;--shiki-dark:#666666"> =></span><span style="--shiki-light:#B07D48;--shiki-dark:#BD976A"> console</span><span style="--shiki-light:#999999;--shiki-dark:#666666">.</span><span style="--shiki-light:#59873A;--shiki-dark:#80A665">log</span><span style="--shiki-light:#999999;--shiki-dark:#666666">(</span><span style="--shiki-light:#B07D48;--shiki-dark:#BD976A">json</span><span style="--shiki-light:#999999;--shiki-dark:#666666">))</span></span></code></pre>
+      <button type="button" data-copy class="muted absolute top-2 right-2 rounded-md p-1.5 transition hover:text-clay" title="Copy to clipboard"><span class="grid size-4 place-items-center" aria-hidden="true">
+  <svg data-icon="copy" class="size-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5.5" y="5.5" width="8" height="8" rx="1.5"/><path d="M10.5 5.5V3.5a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2"/></svg>
+  <svg data-icon="check" class="size-4 text-sage" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" hidden><path d="M3 8.5l3 3 7-7"/></svg>
+</span></button>
+    </div>
+    <p class="muted mt-4 mb-2 text-xs tracking-wide uppercase">Response</p>
+    <pre class="shiki shiki-themes vitesse-light vitesse-dark" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212" tabindex="0"><code><span class="line"><span style="--shiki-light:#999999;--shiki-dark:#666666">[</span></span>
+<span class="line"><span style="--shiki-light:#999999;--shiki-dark:#666666">  {</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577"> "</span><span style="--shiki-light:#998418;--shiki-dark:#B8A965">userId</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#2F798A;--shiki-dark:#4C9A91"> 1</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577"> "</span><span style="--shiki-light:#998418;--shiki-dark:#B8A965">id</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#2F798A;--shiki-dark:#4C9A91"> 1</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577"> "</span><span style="--shiki-light:#998418;--shiki-dark:#B8A965">title</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">sunt aut facere repellat provident occaecati excepturi optio reprehenderit</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577"> "</span><span style="--shiki-light:#998418;--shiki-dark:#B8A965">body</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">quia et suscipit…</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666"> },</span></span>
+<span class="line"><span style="--shiki-light:#999999;--shiki-dark:#666666">  {</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577"> "</span><span style="--shiki-light:#998418;--shiki-dark:#B8A965">userId</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#2F798A;--shiki-dark:#4C9A91"> 1</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577"> "</span><span style="--shiki-light:#998418;--shiki-dark:#B8A965">id</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#2F798A;--shiki-dark:#4C9A91"> 2</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577"> "</span><span style="--shiki-light:#998418;--shiki-dark:#B8A965">title</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">qui est esse</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577"> "</span><span style="--shiki-light:#998418;--shiki-dark:#B8A965">body</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">est rerum tempore vitae…</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666"> },</span></span>
+<span class="line"><span style="--shiki-light:#A0ADA0;--shiki-dark:#758575DD">  // … 100 posts</span></span>
+<span class="line"><span style="--shiki-light:#999999;--shiki-dark:#666666">]</span></span></code></pre>
+    
+  </div>
+<div role="tabpanel" id="panel-create" aria-labelledby="tab-create" class="mt-4" hidden>
+    <div class="relative">
+      <pre class="shiki shiki-themes vitesse-light vitesse-dark" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212" tabindex="0"><code><span class="line"><span style="--shiki-light:#59873A;--shiki-dark:#80A665">fetch</span><span style="--shiki-light:#999999;--shiki-dark:#666666">(</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">'</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">https://jsonplaceholder.typicode.com/posts</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">'</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span><span style="--shiki-light:#999999;--shiki-dark:#666666"> {</span></span>
+<span class="line"><span style="--shiki-light:#998418;--shiki-dark:#B8A965">  method</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77"> '</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">POST</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">'</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="--shiki-light:#998418;--shiki-dark:#B8A965">  body</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#B07D48;--shiki-dark:#BD976A"> JSON</span><span style="--shiki-light:#999999;--shiki-dark:#666666">.</span><span style="--shiki-light:#59873A;--shiki-dark:#80A665">stringify</span><span style="--shiki-light:#999999;--shiki-dark:#666666">({</span></span>
+<span class="line"><span style="--shiki-light:#998418;--shiki-dark:#B8A965">    title</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77"> '</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">foo</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">'</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="--shiki-light:#998418;--shiki-dark:#B8A965">    body</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77"> '</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">bar</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">'</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="--shiki-light:#998418;--shiki-dark:#B8A965">    userId</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#2F798A;--shiki-dark:#4C9A91"> 1</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="--shiki-light:#999999;--shiki-dark:#666666">  }),</span></span>
+<span class="line"><span style="--shiki-light:#998418;--shiki-dark:#B8A965">  headers</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#999999;--shiki-dark:#666666"> {</span></span>
+<span class="line"><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">    '</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">Content-type</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">'</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77"> '</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">application/json; charset=UTF-8</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">'</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="--shiki-light:#999999;--shiki-dark:#666666">  },</span></span>
+<span class="line"><span style="--shiki-light:#999999;--shiki-dark:#666666">})</span></span>
+<span class="line"><span style="--shiki-light:#999999;--shiki-dark:#666666">  .</span><span style="--shiki-light:#59873A;--shiki-dark:#80A665">then</span><span style="--shiki-light:#999999;--shiki-dark:#666666">(</span><span style="--shiki-light:#B07D48;--shiki-dark:#BD976A">response</span><span style="--shiki-light:#999999;--shiki-dark:#666666"> =></span><span style="--shiki-light:#B07D48;--shiki-dark:#BD976A"> response</span><span style="--shiki-light:#999999;--shiki-dark:#666666">.</span><span style="--shiki-light:#59873A;--shiki-dark:#80A665">json</span><span style="--shiki-light:#999999;--shiki-dark:#666666">())</span></span>
+<span class="line"><span style="--shiki-light:#999999;--shiki-dark:#666666">  .</span><span style="--shiki-light:#59873A;--shiki-dark:#80A665">then</span><span style="--shiki-light:#999999;--shiki-dark:#666666">(</span><span style="--shiki-light:#B07D48;--shiki-dark:#BD976A">json</span><span style="--shiki-light:#999999;--shiki-dark:#666666"> =></span><span style="--shiki-light:#B07D48;--shiki-dark:#BD976A"> console</span><span style="--shiki-light:#999999;--shiki-dark:#666666">.</span><span style="--shiki-light:#59873A;--shiki-dark:#80A665">log</span><span style="--shiki-light:#999999;--shiki-dark:#666666">(</span><span style="--shiki-light:#B07D48;--shiki-dark:#BD976A">json</span><span style="--shiki-light:#999999;--shiki-dark:#666666">))</span></span></code></pre>
+      <button type="button" data-copy class="muted absolute top-2 right-2 rounded-md p-1.5 transition hover:text-clay" title="Copy to clipboard"><span class="grid size-4 place-items-center" aria-hidden="true">
+  <svg data-icon="copy" class="size-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5.5" y="5.5" width="8" height="8" rx="1.5"/><path d="M10.5 5.5V3.5a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2"/></svg>
+  <svg data-icon="check" class="size-4 text-sage" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" hidden><path d="M3 8.5l3 3 7-7"/></svg>
+</span></button>
+    </div>
+    <p class="muted mt-4 mb-2 text-xs tracking-wide uppercase">Response</p>
+    <pre class="shiki shiki-themes vitesse-light vitesse-dark" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212" tabindex="0"><code><span class="line"><span style="--shiki-light:#999999;--shiki-dark:#666666">{</span></span>
+<span class="line"><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">  "</span><span style="--shiki-light:#998418;--shiki-dark:#B8A965">title</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">foo</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">  "</span><span style="--shiki-light:#998418;--shiki-dark:#B8A965">body</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">bar</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">  "</span><span style="--shiki-light:#998418;--shiki-dark:#B8A965">userId</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#2F798A;--shiki-dark:#4C9A91"> 1</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">  "</span><span style="--shiki-light:#998418;--shiki-dark:#B8A965">id</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#2F798A;--shiki-dark:#4C9A91"> 101</span></span>
+<span class="line"><span style="--shiki-light:#999999;--shiki-dark:#666666">}</span></span></code></pre>
+    <p class="muted mt-3 text-sm">The resource is not really created on the server, but the response is faked as if.</p>
+  </div>
+<div role="tabpanel" id="panel-update" aria-labelledby="tab-update" class="mt-4" hidden>
+    <div class="relative">
+      <pre class="shiki shiki-themes vitesse-light vitesse-dark" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212" tabindex="0"><code><span class="line"><span style="--shiki-light:#59873A;--shiki-dark:#80A665">fetch</span><span style="--shiki-light:#999999;--shiki-dark:#666666">(</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">'</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">https://jsonplaceholder.typicode.com/posts/1</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">'</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span><span style="--shiki-light:#999999;--shiki-dark:#666666"> {</span></span>
+<span class="line"><span style="--shiki-light:#998418;--shiki-dark:#B8A965">  method</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77"> '</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">PUT</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">'</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="--shiki-light:#998418;--shiki-dark:#B8A965">  body</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#B07D48;--shiki-dark:#BD976A"> JSON</span><span style="--shiki-light:#999999;--shiki-dark:#666666">.</span><span style="--shiki-light:#59873A;--shiki-dark:#80A665">stringify</span><span style="--shiki-light:#999999;--shiki-dark:#666666">({</span></span>
+<span class="line"><span style="--shiki-light:#998418;--shiki-dark:#B8A965">    id</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#2F798A;--shiki-dark:#4C9A91"> 1</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="--shiki-light:#998418;--shiki-dark:#B8A965">    title</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77"> '</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">foo</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">'</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="--shiki-light:#998418;--shiki-dark:#B8A965">    body</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77"> '</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">bar</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">'</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="--shiki-light:#998418;--shiki-dark:#B8A965">    userId</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#2F798A;--shiki-dark:#4C9A91"> 1</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="--shiki-light:#999999;--shiki-dark:#666666">  }),</span></span>
+<span class="line"><span style="--shiki-light:#998418;--shiki-dark:#B8A965">  headers</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#999999;--shiki-dark:#666666"> {</span></span>
+<span class="line"><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">    '</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">Content-type</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">'</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77"> '</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">application/json; charset=UTF-8</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">'</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="--shiki-light:#999999;--shiki-dark:#666666">  },</span></span>
+<span class="line"><span style="--shiki-light:#999999;--shiki-dark:#666666">})</span></span>
+<span class="line"><span style="--shiki-light:#999999;--shiki-dark:#666666">  .</span><span style="--shiki-light:#59873A;--shiki-dark:#80A665">then</span><span style="--shiki-light:#999999;--shiki-dark:#666666">(</span><span style="--shiki-light:#B07D48;--shiki-dark:#BD976A">response</span><span style="--shiki-light:#999999;--shiki-dark:#666666"> =></span><span style="--shiki-light:#B07D48;--shiki-dark:#BD976A"> response</span><span style="--shiki-light:#999999;--shiki-dark:#666666">.</span><span style="--shiki-light:#59873A;--shiki-dark:#80A665">json</span><span style="--shiki-light:#999999;--shiki-dark:#666666">())</span></span>
+<span class="line"><span style="--shiki-light:#999999;--shiki-dark:#666666">  .</span><span style="--shiki-light:#59873A;--shiki-dark:#80A665">then</span><span style="--shiki-light:#999999;--shiki-dark:#666666">(</span><span style="--shiki-light:#B07D48;--shiki-dark:#BD976A">json</span><span style="--shiki-light:#999999;--shiki-dark:#666666"> =></span><span style="--shiki-light:#B07D48;--shiki-dark:#BD976A"> console</span><span style="--shiki-light:#999999;--shiki-dark:#666666">.</span><span style="--shiki-light:#59873A;--shiki-dark:#80A665">log</span><span style="--shiki-light:#999999;--shiki-dark:#666666">(</span><span style="--shiki-light:#B07D48;--shiki-dark:#BD976A">json</span><span style="--shiki-light:#999999;--shiki-dark:#666666">))</span></span></code></pre>
+      <button type="button" data-copy class="muted absolute top-2 right-2 rounded-md p-1.5 transition hover:text-clay" title="Copy to clipboard"><span class="grid size-4 place-items-center" aria-hidden="true">
+  <svg data-icon="copy" class="size-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5.5" y="5.5" width="8" height="8" rx="1.5"/><path d="M10.5 5.5V3.5a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2"/></svg>
+  <svg data-icon="check" class="size-4 text-sage" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" hidden><path d="M3 8.5l3 3 7-7"/></svg>
+</span></button>
+    </div>
+    <p class="muted mt-4 mb-2 text-xs tracking-wide uppercase">Response</p>
+    <pre class="shiki shiki-themes vitesse-light vitesse-dark" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212" tabindex="0"><code><span class="line"><span style="--shiki-light:#999999;--shiki-dark:#666666">{</span></span>
+<span class="line"><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">  "</span><span style="--shiki-light:#998418;--shiki-dark:#B8A965">id</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#2F798A;--shiki-dark:#4C9A91"> 1</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">  "</span><span style="--shiki-light:#998418;--shiki-dark:#B8A965">title</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">foo</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">  "</span><span style="--shiki-light:#998418;--shiki-dark:#B8A965">body</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">bar</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">  "</span><span style="--shiki-light:#998418;--shiki-dark:#B8A965">userId</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#2F798A;--shiki-dark:#4C9A91"> 1</span></span>
+<span class="line"><span style="--shiki-light:#999999;--shiki-dark:#666666">}</span></span></code></pre>
+    <p class="muted mt-3 text-sm">The resource is not really updated on the server, but the response is faked as if.</p>
+  </div>
+<div role="tabpanel" id="panel-patch" aria-labelledby="tab-patch" class="mt-4" hidden>
+    <div class="relative">
+      <pre class="shiki shiki-themes vitesse-light vitesse-dark" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212" tabindex="0"><code><span class="line"><span style="--shiki-light:#59873A;--shiki-dark:#80A665">fetch</span><span style="--shiki-light:#999999;--shiki-dark:#666666">(</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">'</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">https://jsonplaceholder.typicode.com/posts/1</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">'</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span><span style="--shiki-light:#999999;--shiki-dark:#666666"> {</span></span>
+<span class="line"><span style="--shiki-light:#998418;--shiki-dark:#B8A965">  method</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77"> '</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">PATCH</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">'</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="--shiki-light:#998418;--shiki-dark:#B8A965">  body</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#B07D48;--shiki-dark:#BD976A"> JSON</span><span style="--shiki-light:#999999;--shiki-dark:#666666">.</span><span style="--shiki-light:#59873A;--shiki-dark:#80A665">stringify</span><span style="--shiki-light:#999999;--shiki-dark:#666666">({</span></span>
+<span class="line"><span style="--shiki-light:#998418;--shiki-dark:#B8A965">    title</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77"> '</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">foo</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">'</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="--shiki-light:#999999;--shiki-dark:#666666">  }),</span></span>
+<span class="line"><span style="--shiki-light:#998418;--shiki-dark:#B8A965">  headers</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#999999;--shiki-dark:#666666"> {</span></span>
+<span class="line"><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">    '</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">Content-type</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">'</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77"> '</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">application/json; charset=UTF-8</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">'</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="--shiki-light:#999999;--shiki-dark:#666666">  },</span></span>
+<span class="line"><span style="--shiki-light:#999999;--shiki-dark:#666666">})</span></span>
+<span class="line"><span style="--shiki-light:#999999;--shiki-dark:#666666">  .</span><span style="--shiki-light:#59873A;--shiki-dark:#80A665">then</span><span style="--shiki-light:#999999;--shiki-dark:#666666">(</span><span style="--shiki-light:#B07D48;--shiki-dark:#BD976A">response</span><span style="--shiki-light:#999999;--shiki-dark:#666666"> =></span><span style="--shiki-light:#B07D48;--shiki-dark:#BD976A"> response</span><span style="--shiki-light:#999999;--shiki-dark:#666666">.</span><span style="--shiki-light:#59873A;--shiki-dark:#80A665">json</span><span style="--shiki-light:#999999;--shiki-dark:#666666">())</span></span>
+<span class="line"><span style="--shiki-light:#999999;--shiki-dark:#666666">  .</span><span style="--shiki-light:#59873A;--shiki-dark:#80A665">then</span><span style="--shiki-light:#999999;--shiki-dark:#666666">(</span><span style="--shiki-light:#B07D48;--shiki-dark:#BD976A">json</span><span style="--shiki-light:#999999;--shiki-dark:#666666"> =></span><span style="--shiki-light:#B07D48;--shiki-dark:#BD976A"> console</span><span style="--shiki-light:#999999;--shiki-dark:#666666">.</span><span style="--shiki-light:#59873A;--shiki-dark:#80A665">log</span><span style="--shiki-light:#999999;--shiki-dark:#666666">(</span><span style="--shiki-light:#B07D48;--shiki-dark:#BD976A">json</span><span style="--shiki-light:#999999;--shiki-dark:#666666">))</span></span></code></pre>
+      <button type="button" data-copy class="muted absolute top-2 right-2 rounded-md p-1.5 transition hover:text-clay" title="Copy to clipboard"><span class="grid size-4 place-items-center" aria-hidden="true">
+  <svg data-icon="copy" class="size-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5.5" y="5.5" width="8" height="8" rx="1.5"/><path d="M10.5 5.5V3.5a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2"/></svg>
+  <svg data-icon="check" class="size-4 text-sage" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" hidden><path d="M3 8.5l3 3 7-7"/></svg>
+</span></button>
+    </div>
+    <p class="muted mt-4 mb-2 text-xs tracking-wide uppercase">Response</p>
+    <pre class="shiki shiki-themes vitesse-light vitesse-dark" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212" tabindex="0"><code><span class="line"><span style="--shiki-light:#999999;--shiki-dark:#666666">{</span></span>
+<span class="line"><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">  "</span><span style="--shiki-light:#998418;--shiki-dark:#B8A965">userId</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#2F798A;--shiki-dark:#4C9A91"> 1</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">  "</span><span style="--shiki-light:#998418;--shiki-dark:#B8A965">id</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#2F798A;--shiki-dark:#4C9A91"> 1</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">  "</span><span style="--shiki-light:#998418;--shiki-dark:#B8A965">title</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">foo</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">  "</span><span style="--shiki-light:#998418;--shiki-dark:#B8A965">body</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">quia et suscipit</span><span style="--shiki-light:#A65E2B;--shiki-dark:#C99076">\n</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">suscipit recusandae consequuntur expedita et cum</span><span style="--shiki-light:#A65E2B;--shiki-dark:#C99076">\n</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">reprehenderit molestiae ut ut quas totam</span><span style="--shiki-light:#A65E2B;--shiki-dark:#C99076">\n</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">nostrum rerum est autem sunt rem eveniet architecto</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">"</span></span>
+<span class="line"><span style="--shiki-light:#999999;--shiki-dark:#666666">}</span></span></code></pre>
+    <p class="muted mt-3 text-sm">The resource is not really patched on the server, but the response is faked as if.</p>
+  </div>
+<div role="tabpanel" id="panel-delete" aria-labelledby="tab-delete" class="mt-4" hidden>
+    <div class="relative">
+      <pre class="shiki shiki-themes vitesse-light vitesse-dark" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212" tabindex="0"><code><span class="line"><span style="--shiki-light:#59873A;--shiki-dark:#80A665">fetch</span><span style="--shiki-light:#999999;--shiki-dark:#666666">(</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">'</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">https://jsonplaceholder.typicode.com/posts/1</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">'</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span><span style="--shiki-light:#999999;--shiki-dark:#666666"> {</span></span>
+<span class="line"><span style="--shiki-light:#998418;--shiki-dark:#B8A965">  method</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77"> '</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">DELETE</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">'</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span></span>
+<span class="line"><span style="--shiki-light:#999999;--shiki-dark:#666666">})</span></span>
+<span class="line"><span style="--shiki-light:#999999;--shiki-dark:#666666">  .</span><span style="--shiki-light:#59873A;--shiki-dark:#80A665">then</span><span style="--shiki-light:#999999;--shiki-dark:#666666">(</span><span style="--shiki-light:#B07D48;--shiki-dark:#BD976A">response</span><span style="--shiki-light:#999999;--shiki-dark:#666666"> =></span><span style="--shiki-light:#B07D48;--shiki-dark:#BD976A"> response</span><span style="--shiki-light:#999999;--shiki-dark:#666666">.</span><span style="--shiki-light:#59873A;--shiki-dark:#80A665">json</span><span style="--shiki-light:#999999;--shiki-dark:#666666">())</span></span>
+<span class="line"><span style="--shiki-light:#999999;--shiki-dark:#666666">  .</span><span style="--shiki-light:#59873A;--shiki-dark:#80A665">then</span><span style="--shiki-light:#999999;--shiki-dark:#666666">(</span><span style="--shiki-light:#B07D48;--shiki-dark:#BD976A">json</span><span style="--shiki-light:#999999;--shiki-dark:#666666"> =></span><span style="--shiki-light:#B07D48;--shiki-dark:#BD976A"> console</span><span style="--shiki-light:#999999;--shiki-dark:#666666">.</span><span style="--shiki-light:#59873A;--shiki-dark:#80A665">log</span><span style="--shiki-light:#999999;--shiki-dark:#666666">(</span><span style="--shiki-light:#B07D48;--shiki-dark:#BD976A">json</span><span style="--shiki-light:#999999;--shiki-dark:#666666">))</span></span></code></pre>
+      <button type="button" data-copy class="muted absolute top-2 right-2 rounded-md p-1.5 transition hover:text-clay" title="Copy to clipboard"><span class="grid size-4 place-items-center" aria-hidden="true">
+  <svg data-icon="copy" class="size-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5.5" y="5.5" width="8" height="8" rx="1.5"/><path d="M10.5 5.5V3.5a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2"/></svg>
+  <svg data-icon="check" class="size-4 text-sage" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" hidden><path d="M3 8.5l3 3 7-7"/></svg>
+</span></button>
+    </div>
+    <p class="muted mt-4 mb-2 text-xs tracking-wide uppercase">Response</p>
+    <pre class="shiki shiki-themes vitesse-light vitesse-dark" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212" tabindex="0"><code><span class="line"><span style="--shiki-light:#999999;--shiki-dark:#666666">{}</span></span></code></pre>
+    <p class="muted mt-3 text-sm">The resource is not really deleted on the server, but the response is faked as if.</p>
+  </div>
+<div role="tabpanel" id="panel-filter" aria-labelledby="tab-filter" class="mt-4" hidden>
+    <div class="relative">
+      <pre class="shiki shiki-themes vitesse-light vitesse-dark" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212" tabindex="0"><code><span class="line"><span style="--shiki-light:#A0ADA0;--shiki-dark:#758575DD">// All the posts that belong to the first user</span></span>
+<span class="line"><span style="--shiki-light:#59873A;--shiki-dark:#80A665">fetch</span><span style="--shiki-light:#999999;--shiki-dark:#666666">(</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">'</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">https://jsonplaceholder.typicode.com/posts?userId=1</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">'</span><span style="--shiki-light:#999999;--shiki-dark:#666666">)</span></span>
+<span class="line"><span style="--shiki-light:#999999;--shiki-dark:#666666">  .</span><span style="--shiki-light:#59873A;--shiki-dark:#80A665">then</span><span style="--shiki-light:#999999;--shiki-dark:#666666">(</span><span style="--shiki-light:#B07D48;--shiki-dark:#BD976A">response</span><span style="--shiki-light:#999999;--shiki-dark:#666666"> =></span><span style="--shiki-light:#B07D48;--shiki-dark:#BD976A"> response</span><span style="--shiki-light:#999999;--shiki-dark:#666666">.</span><span style="--shiki-light:#59873A;--shiki-dark:#80A665">json</span><span style="--shiki-light:#999999;--shiki-dark:#666666">())</span></span>
+<span class="line"><span style="--shiki-light:#999999;--shiki-dark:#666666">  .</span><span style="--shiki-light:#59873A;--shiki-dark:#80A665">then</span><span style="--shiki-light:#999999;--shiki-dark:#666666">(</span><span style="--shiki-light:#B07D48;--shiki-dark:#BD976A">json</span><span style="--shiki-light:#999999;--shiki-dark:#666666"> =></span><span style="--shiki-light:#B07D48;--shiki-dark:#BD976A"> console</span><span style="--shiki-light:#999999;--shiki-dark:#666666">.</span><span style="--shiki-light:#59873A;--shiki-dark:#80A665">log</span><span style="--shiki-light:#999999;--shiki-dark:#666666">(</span><span style="--shiki-light:#B07D48;--shiki-dark:#BD976A">json</span><span style="--shiki-light:#999999;--shiki-dark:#666666">))</span></span></code></pre>
+      <button type="button" data-copy class="muted absolute top-2 right-2 rounded-md p-1.5 transition hover:text-clay" title="Copy to clipboard"><span class="grid size-4 place-items-center" aria-hidden="true">
+  <svg data-icon="copy" class="size-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5.5" y="5.5" width="8" height="8" rx="1.5"/><path d="M10.5 5.5V3.5a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2"/></svg>
+  <svg data-icon="check" class="size-4 text-sage" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" hidden><path d="M3 8.5l3 3 7-7"/></svg>
+</span></button>
+    </div>
+    <p class="muted mt-4 mb-2 text-xs tracking-wide uppercase">Response</p>
+    <pre class="shiki shiki-themes vitesse-light vitesse-dark" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212" tabindex="0"><code><span class="line"><span style="--shiki-light:#999999;--shiki-dark:#666666">[</span></span>
+<span class="line"><span style="--shiki-light:#999999;--shiki-dark:#666666">  {</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577"> "</span><span style="--shiki-light:#998418;--shiki-dark:#B8A965">userId</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#2F798A;--shiki-dark:#4C9A91"> 1</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577"> "</span><span style="--shiki-light:#998418;--shiki-dark:#B8A965">id</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#2F798A;--shiki-dark:#4C9A91"> 1</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577"> "</span><span style="--shiki-light:#998418;--shiki-dark:#B8A965">title</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">sunt aut facere repellat provident occaecati excepturi optio reprehenderit</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577"> "</span><span style="--shiki-light:#998418;--shiki-dark:#B8A965">body</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">quia et suscipit…</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666"> },</span></span>
+<span class="line"><span style="--shiki-light:#999999;--shiki-dark:#666666">  {</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577"> "</span><span style="--shiki-light:#998418;--shiki-dark:#B8A965">userId</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#2F798A;--shiki-dark:#4C9A91"> 1</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577"> "</span><span style="--shiki-light:#998418;--shiki-dark:#B8A965">id</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#2F798A;--shiki-dark:#4C9A91"> 2</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577"> "</span><span style="--shiki-light:#998418;--shiki-dark:#B8A965">title</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">qui est esse</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577"> "</span><span style="--shiki-light:#998418;--shiki-dark:#B8A965">body</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">est rerum tempore vitae…</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666"> },</span></span>
+<span class="line"><span style="--shiki-light:#A0ADA0;--shiki-dark:#758575DD">  // … 10 posts</span></span>
+<span class="line"><span style="--shiki-light:#999999;--shiki-dark:#666666">]</span></span></code></pre>
+    <p class="muted mt-3 text-sm">Basic filtering is supported through query parameters.</p>
+  </div>
+<div role="tabpanel" id="panel-nested" aria-labelledby="tab-nested" class="mt-4" hidden>
+    <div class="relative">
+      <pre class="shiki shiki-themes vitesse-light vitesse-dark" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212" tabindex="0"><code><span class="line"><span style="--shiki-light:#A0ADA0;--shiki-dark:#758575DD">// Equivalent to /comments?postId=1</span></span>
+<span class="line"><span style="--shiki-light:#59873A;--shiki-dark:#80A665">fetch</span><span style="--shiki-light:#999999;--shiki-dark:#666666">(</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">'</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">https://jsonplaceholder.typicode.com/posts/1/comments</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">'</span><span style="--shiki-light:#999999;--shiki-dark:#666666">)</span></span>
+<span class="line"><span style="--shiki-light:#999999;--shiki-dark:#666666">  .</span><span style="--shiki-light:#59873A;--shiki-dark:#80A665">then</span><span style="--shiki-light:#999999;--shiki-dark:#666666">(</span><span style="--shiki-light:#B07D48;--shiki-dark:#BD976A">response</span><span style="--shiki-light:#999999;--shiki-dark:#666666"> =></span><span style="--shiki-light:#B07D48;--shiki-dark:#BD976A"> response</span><span style="--shiki-light:#999999;--shiki-dark:#666666">.</span><span style="--shiki-light:#59873A;--shiki-dark:#80A665">json</span><span style="--shiki-light:#999999;--shiki-dark:#666666">())</span></span>
+<span class="line"><span style="--shiki-light:#999999;--shiki-dark:#666666">  .</span><span style="--shiki-light:#59873A;--shiki-dark:#80A665">then</span><span style="--shiki-light:#999999;--shiki-dark:#666666">(</span><span style="--shiki-light:#B07D48;--shiki-dark:#BD976A">json</span><span style="--shiki-light:#999999;--shiki-dark:#666666"> =></span><span style="--shiki-light:#B07D48;--shiki-dark:#BD976A"> console</span><span style="--shiki-light:#999999;--shiki-dark:#666666">.</span><span style="--shiki-light:#59873A;--shiki-dark:#80A665">log</span><span style="--shiki-light:#999999;--shiki-dark:#666666">(</span><span style="--shiki-light:#B07D48;--shiki-dark:#BD976A">json</span><span style="--shiki-light:#999999;--shiki-dark:#666666">))</span></span></code></pre>
+      <button type="button" data-copy class="muted absolute top-2 right-2 rounded-md p-1.5 transition hover:text-clay" title="Copy to clipboard"><span class="grid size-4 place-items-center" aria-hidden="true">
+  <svg data-icon="copy" class="size-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5.5" y="5.5" width="8" height="8" rx="1.5"/><path d="M10.5 5.5V3.5a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2"/></svg>
+  <svg data-icon="check" class="size-4 text-sage" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" hidden><path d="M3 8.5l3 3 7-7"/></svg>
+</span></button>
+    </div>
+    <p class="muted mt-4 mb-2 text-xs tracking-wide uppercase">Response</p>
+    <pre class="shiki shiki-themes vitesse-light vitesse-dark" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212" tabindex="0"><code><span class="line"><span style="--shiki-light:#999999;--shiki-dark:#666666">[</span></span>
+<span class="line"><span style="--shiki-light:#999999;--shiki-dark:#666666">  {</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577"> "</span><span style="--shiki-light:#998418;--shiki-dark:#B8A965">postId</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#2F798A;--shiki-dark:#4C9A91"> 1</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577"> "</span><span style="--shiki-light:#998418;--shiki-dark:#B8A965">id</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#2F798A;--shiki-dark:#4C9A91"> 1</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577"> "</span><span style="--shiki-light:#998418;--shiki-dark:#B8A965">name</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">id labore ex et quam laborum</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577"> "</span><span style="--shiki-light:#998418;--shiki-dark:#B8A965">email</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="9fdaf3f6ecfaf0dff8feedfbf1faedb1fdf6e5">[email&#160;protected]</a></span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577"> "</span><span style="--shiki-light:#998418;--shiki-dark:#B8A965">body</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">laudantium enim quasi…</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666"> },</span></span>
+<span class="line"><span style="--shiki-light:#999999;--shiki-dark:#666666">  {</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577"> "</span><span style="--shiki-light:#998418;--shiki-dark:#B8A965">postId</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#2F798A;--shiki-dark:#4C9A91"> 1</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577"> "</span><span style="--shiki-light:#998418;--shiki-dark:#B8A965">id</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#2F798A;--shiki-dark:#4C9A91"> 2</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577"> "</span><span style="--shiki-light:#998418;--shiki-dark:#B8A965">name</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">quo vero reiciendis velit similique earum</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577"> "</span><span style="--shiki-light:#998418;--shiki-dark:#B8A965">email</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="074d667e6962584c726f6e6447747e6369627e2964686a">[email&#160;protected]</a></span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">,</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577"> "</span><span style="--shiki-light:#998418;--shiki-dark:#B8A965">body</span><span style="--shiki-light:#99841877;--shiki-dark:#B8A96577">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666">:</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">est natus enim nihil…</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="--shiki-light:#999999;--shiki-dark:#666666"> },</span></span>
+<span class="line"><span style="--shiki-light:#A0ADA0;--shiki-dark:#758575DD">  // … 5 comments</span></span>
+<span class="line"><span style="--shiki-light:#999999;--shiki-dark:#666666">]</span></span></code></pre>
+    <p class="muted mt-3 text-sm">One level of nested route is available: /posts/1/comments, /albums/1/photos, /users/1/albums, /users/1/todos and /users/1/posts.</p>
+  </div>
+      </section>
+
+      <!-- Resources -->
+      <section class="pb-16">
+        <h2 class="text-2xl">Resources</h2>
+        <p class="muted mt-2 text-sm">JSONPlaceholder comes with a set of 6 common resources.</p>
+        <table class="table mt-6">
+          <tbody>
+            <tr><td><a href="/posts">/posts</a></td><td class="muted text-right">100 posts</td></tr>
+<tr><td><a href="/comments">/comments</a></td><td class="muted text-right">500 comments</td></tr>
+<tr><td><a href="/albums">/albums</a></td><td class="muted text-right">100 albums</td></tr>
+<tr><td><a href="/photos">/photos</a></td><td class="muted text-right">5000 photos</td></tr>
+<tr><td><a href="/todos">/todos</a></td><td class="muted text-right">200 todos</td></tr>
+<tr><td><a href="/users">/users</a></td><td class="muted text-right">10 users</td></tr>
+          </tbody>
+        </table>
+        <p class="muted mt-3 text-sm">
+          Resources have relations. For example: posts have many comments, albums have
+          many photos. See <a href="#nested">nested routes</a> for the full list.
+        </p>
+      </section>
+
+      <!-- Routes -->
+      <section class="pb-16">
+        <h2 class="text-2xl">Routes</h2>
+        <p class="muted mt-2 text-sm">All HTTP methods are supported. You can use http or https for your requests.</p>
+        <table class="table mt-6">
+          <tbody>
+            <tr><td class="method method-get w-20">GET</td><td class="font-mono"><a href="/posts">/posts</a></td></tr>
+<tr><td class="method method-get w-20">GET</td><td class="font-mono"><a href="/posts/1">/posts/1</a></td></tr>
+<tr><td class="method method-get w-20">GET</td><td class="font-mono"><a href="/posts/1/comments">/posts/1/comments</a></td></tr>
+<tr><td class="method method-get w-20">GET</td><td class="font-mono"><a href="/comments?postId=1">/comments?postId=1</a></td></tr>
+<tr><td class="method method-post w-20">POST</td><td class="font-mono">/posts</td></tr>
+<tr><td class="method method-put w-20">PUT</td><td class="font-mono">/posts/1</td></tr>
+<tr><td class="method method-patch w-20">PATCH</td><td class="font-mono">/posts/1</td></tr>
+<tr><td class="method method-delete w-20">DELETE</td><td class="font-mono">/posts/1</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Own data -->
+      <section class="pb-16">
+        <h2 class="text-2xl">Need your own data?</h2>
+        <p class="mt-2">
+          <a href="https://mockend.com">Mockend</a> gives you a fake API per
+          developer, agent or feature, from a single file in your GitHub repo.
+        </p>
+      </section>
+    </main>
+
+    <footer class="page muted rule border-t py-10 text-sm">
+      <p>
+        Coded and maintained with ❤️&nbsp;by
+        <a href="https://github.com/typicode">typicode</a> © 2013 - today.
+        You can <a href="https://github.com/sponsors/typicode">sponsor this project</a>.
+      </p>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+      // Live GitHub stars (the build wrote the last known count)
+      function formatStars(n) {
+        return n >= 1000 ? (n / 1000).toFixed(1).replace(/\.0$/, '') + 'k' : String(n)
+      }
+      document.querySelectorAll('[data-repo]').forEach(function (link) {
+        var count = link.querySelector('.stars')
+        if (/^\d+$/.test(count.textContent)) count.textContent = formatStars(Number(count.textContent))
+        fetch('https://api.github.com/repos/' + link.dataset.repo)
+          .then(function (res) { return res.ok ? res.json() : null })
+          .then(function (json) { if (json) count.textContent = formatStars(json.stargazers_count) })
+          .catch(function () {})
+      })
+
+      // Tabs
+      var tabs = document.querySelectorAll('[role="tab"]')
+      function select(tab) {
+        tabs.forEach(function (t) {
+          var on = t === tab
+          t.setAttribute('aria-selected', on)
+          document.getElementById(t.getAttribute('aria-controls')).hidden = !on
+        })
+      }
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          select(tab)
+          history.replaceState(null, '', '#' + tab.id.replace('tab-', ''))
+        })
+      })
+      var initial = document.getElementById('tab-' + location.hash.slice(1))
+      if (initial) select(initial)
+
+      // Copy buttons: copy the button's own text, or the code block next to it
+      document.querySelectorAll('[data-copy]').forEach(function (button) {
+        button.addEventListener('click', function () {
+          var code = button.parentElement.querySelector('.shiki code')
+          var text = code ? code.textContent : button.firstElementChild.textContent
+          navigator.clipboard.writeText(text).then(function () {
+            // SVG elements have no `hidden` property, so toggle the attribute
+            var icons = button.querySelectorAll('[data-icon]')
+            icons[0].toggleAttribute('hidden', true)
+            icons[1].toggleAttribute('hidden', false)
+            setTimeout(function () {
+              icons[0].toggleAttribute('hidden', false)
+              icons[1].toggleAttribute('hidden', true)
+            }, 1500)
+          })
+        })
+      })
+    </script>
+  </body>
+</html>
