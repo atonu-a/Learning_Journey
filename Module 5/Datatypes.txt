@@ -1,0 +1,8 @@
+Data Types in PostgreSQL:
+- INTEGER
+- NUMERIC
+- VARCHAR (n)
+- TEXT
+- BOOLEAN
+- DATE
+- TIMESTAMP
