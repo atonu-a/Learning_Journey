@@ -213,4 +213,23 @@ WHERE city IN ('Rajshahi', 'Sylhet', 'Chittagong');
 
 SELECT name, city 
 FROM customers
-WHERE city NOT IN ('Dhaka', 'Chittagong')
+WHERE city NOT IN ('Dhaka', 'Chittagong');
+
+
+-- Renaming using AS
+SELECT
+    name AS customer_name, city AS customer_city
+FROM
+    customers;
+
+SELECT
+    name AS employee_name , salary
+FROM
+    employees;
+
+-- operations
+
+SELECT 
+    name, 
+    salary*1.15 as new_salary
+FROM employees;
