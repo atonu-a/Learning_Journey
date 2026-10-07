@@ -194,3 +194,23 @@ VALUES (
 SELECT * FROM employees;
 
 SELECT * FROM customers;
+
+
+-- WHERE USING
+SELECT 
+    name , salary
+FROM 
+    employees
+WHERE 
+    salary > 60000;
+
+
+
+-- Using IN and NOT IN
+SELECT name, city 
+FROM customers
+WHERE city IN ('Rajshahi', 'Sylhet', 'Chittagong');
+
+SELECT name, city 
+FROM customers
+WHERE city NOT IN ('Dhaka', 'Chittagong')
