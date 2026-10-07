@@ -233,3 +233,48 @@ SELECT
     name, 
     salary*1.15 as new_salary
 FROM employees;
+
+SELECT * FROM employees;
+
+SELECT name, salary * 1.15 as new_salary FROM employees ORDER BY salary ASC;
+SELECT name, salary * 1.15 as new_salary FROM employees ORDER BY salary DESC;
+
+-- LIMIT and OFFSET
+SELECT * FROM employees LIMIT 3 OFFSET 9;
+
+-- LIKE
+SELECT name, email
+FROM customers
+WHERE email LIKE '%@gmail.com';
+SELECT name, email
+FROM customers
+WHERE email LIKE '%a%@gmail.com';
+SELECT name, email
+FROM customers
+WHERE email LIKE '_____@gmail.com';
+
+
+
+
+-- AGGREGATE FUNCTIONS
+SELECT COUNT(*) FROM customers;
+SELECT AVG(salary) as average_salary
+FROM employees;
+
+SELECT SUM(salary) AS total_salary
+FROM employees;
+
+SELECT MIN(salary) AS minimum_salary
+FROM employees;
+SELECT MAX(salary) AS maximum_salary
+FROM employees;
+
+-- GROUP BY
+SELECT COUNT(name) as total_people, city
+FROM customers
+GROUP BY city
+-- HAVING city IN ('Dhaka', 'Chittagong') 
+ORDER BY total_people ASC
+;
+
+
