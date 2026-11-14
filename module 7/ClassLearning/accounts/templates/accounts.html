@@ -8,5 +8,15 @@
 <body>
     <h1>Hi this Atonu.</h1>
     <p>What is your name?</p>
+
+    <form action="" method="post">
+        {% csrf_token %}
+
+        {{ student_form }}
+        <br>
+        <br>
+
+        <button type="submit">Submit</button>
+    </form>
 </body>
 </html>
