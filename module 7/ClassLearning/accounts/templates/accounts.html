@@ -9,7 +9,7 @@
     <h1>Hi this Atonu.</h1>
     <p>What is your name?</p>
 
-    <form action="" method="post">
+    <form action="" method="post" enctype="multipart/form-data">
         {% csrf_token %}
 
         {{ student_form }}

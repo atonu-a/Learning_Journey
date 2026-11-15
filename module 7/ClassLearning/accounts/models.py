@@ -16,3 +16,4 @@ class Student(models.Model):
     monthly_fee = models.IntegerField()
     address = models.TextField()
     bio = models.TextField()
+    img = models.ImageField(upload_to="students/", blank=True, null=True)

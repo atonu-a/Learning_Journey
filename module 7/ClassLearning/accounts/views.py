@@ -10,7 +10,7 @@ def accounts_view(request):
     if request.method == "POST":
         print("POST request")
         data = request.POST
-        student_form = StudentCreationForm(data)
+        student_form = StudentCreationForm(data, files=request.FILES)
         if student_form.is_valid():
             student_form.save()
             return redirect('product/')
@@ -33,7 +33,8 @@ def update(request, id):
     student = get_object_or_404(Student, id = id)
     if request.method == "POST":
         data = request.POST
-        student_form =  StudentCreationForm(data, instance=student)
+
+        student_form =  StudentCreationForm(data, instance=student, files = request.FILES)
         if student_form.is_valid():
             student_form.save()
             return redirect("product")
